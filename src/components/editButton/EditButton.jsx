@@ -55,13 +55,13 @@ const EditButton = (props) => {
     }
     // submit handler
     async function handleSubmit(e) {
+        e.preventDefault()
         const data = {
             startDate: startDate?.getTime(),
             endDate: endDate?.getTime(),
             excludedDates: excludedDates?.map((d) => new Date(d).getTime()),
             leads
         }
-        e.preventDefault()
         try {
             const response = await fetch(`${backendUrl}/api/leads/${props?.id}`, {
                 method: 'PUT',

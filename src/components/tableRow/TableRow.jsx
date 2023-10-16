@@ -27,7 +27,7 @@ const TableRow = ({ lead, index }) => {
             <td className="border-r px-2">{leads}</td>
             <td className="border-r px-2">{ddr}</td>
             <td className="border-r px-2">{format(updatedAt, 'HH:mm - dd MMM ')}</td>
-            <td className="px-2 " > <div className="flex gap-2 items-center justify-center"><EditButton startDate={startDate} endDate={endDate} excludedDates={excludedDates} leads={leads} /> <DeleteButton id={lead?._id} /> </div></td>
+            <td className="px-2 " > <div className="flex gap-2 items-center justify-center"><EditButton startDate={startDate} endDate={endDate} excludedDates={excludedDates} leads={leads} id={lead?._id} /> <DeleteButton id={lead?._id} /> </div></td>
         </tr>
     )
 }
