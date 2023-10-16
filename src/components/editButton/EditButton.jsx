@@ -80,7 +80,7 @@ const EditButton = (props) => {
                 setLeads('')
                 dispatch(SET_LEAD(result))
                 dispatch(SET_TOTAL_PAGES(Math.ceil(result.length / 10)))
-                toast.success('Lead added')
+                toast.success('Lead updated')
             } else {
                 const result = await response.json()
                 toast.error(result?.message)
